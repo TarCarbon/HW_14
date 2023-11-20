@@ -6,6 +6,9 @@ import lombok.Getter;
 import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 
+import java.util.ArrayList;
+import java.util.List;
+
 @Data
 @RequiredArgsConstructor
 @Entity
@@ -21,4 +24,9 @@ public class Client {
     @Getter
     @Setter
     private String name;
+
+    @Getter
+    @Setter
+    @OneToMany (mappedBy = "client_id", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
+    private List<Ticket> ticket = new ArrayList<>();
 }
