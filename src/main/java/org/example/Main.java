@@ -6,7 +6,7 @@ public class Main {
     final private static Logger logger = Logger.getLogger(Main.class);
     public static void main(String[] args) {
     logger.info("Start program!");
-
+    FlywayMigration.migration();
     logger.info("End program!");
     }
 }

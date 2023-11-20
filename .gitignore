@@ -5,3 +5,4 @@ gradle
 gradlew.bat
 gradlew
 settings.gradle
+src/main/java/org/example/Config.java
