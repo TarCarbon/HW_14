@@ -15,11 +15,4 @@ public class Planet {
     @Column (name = "planet_name")
     private String name;
 
-    @OneToOne(mappedBy = "planet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Ticket fromPlanet;
-
-    @OneToOne(mappedBy = "planet", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Ticket toPlanet;
-
-
 }

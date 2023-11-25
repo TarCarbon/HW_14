@@ -21,7 +21,4 @@ public class Client {
     @Setter
     private String name;
 
-    @Getter
-    @OneToMany (mappedBy = "client_id", fetch = FetchType.EAGER, cascade = CascadeType.ALL)
-    private List<Ticket> ticket = new ArrayList<>();
 }

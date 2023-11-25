@@ -1,0 +1,31 @@
+2023-11-25 23:28:31 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:29:10 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:29:57 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:42:08 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:42:47 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:43:01 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:43:26 INFO  FlywayMigration:17 - migration is successful
+  2023-11-25 23:44:49 INFO  FlywayMigration:17 - migration is successful
+  2023-11-25 23:45:08 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:45:40 INFO  FlywayMigration:16 - migration is successful
+  2023-11-25 23:47:11 ERROR FlywayMigration:19 - Migration fatal: org.flywaydb.core.internal.command.DbMigrate$FlywayMigrateException: Migration V2__populate_db.sql failed
+------------------------------------
+SQL State  : 23514
+Error Code : 23514
+Message    : Check constraint invalid: "CONSTRAINT_8CD: "; SQL statement:
+INSERT INTO planet (id, planet_name) VALUES
+                                  ('MARS', 'Mars'),
+                                  ('VEN', 'Venus'),
+                                  ('EARTH', 'Earth'),
+                                  ('JUP', 'Jupiter'),
+                                  ('SAT', 'Saturn') [23514-210]
+Location   : db/migration/V2__populate_db.sql (/home/greenfey/Programs/Project/HW_13/build/resources/main/db/migration/V2__populate_db.sql)
+Line       : 13
+Statement  : INSERT INTO planet (id, planet_name) VALUES
+                                  ('MARS', 'Mars'),
+                                  ('VEN', 'Venus'),
+                                  ('EARTH', 'Earth'),
+                                  ('JUP', 'Jupiter'),
+                                  ('SAT', 'Saturn')
+
+  
