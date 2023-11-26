@@ -5,41 +5,40 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
-public class PlanetDAO {
+public class ClientDao {
+
     private SessionFactory sessionFactory = HibernateUtil.getInstance().getSessionFactory();
 
     //Create
-    public void save (Planet planet) {
+    public void save (Client client) {
         try(Session session = sessionFactory.openSession()){
-            Transaction transaction = session.getTransaction();
-            session.persist(planet);
+            Transaction transaction = session.beginTransaction();
+            session.save(client);
             transaction.commit();
         }
     }
 
     //Read
-    public Planet findById(int id) {
-        try(Session session = sessionFactory.openSession()) {
-            return session.get(Planet.class, id);
+    public Client findById(int id) {
+        try(Session session = sessionFactory.openSession()){
+            return session.get(Client.class, id);
         }
     }
 
     //Update
-    public void update(Planet planet){
-        try(Session session = sessionFactory.openSession()){
+    public void update(Client client){
+        try(Session session = sessionFactory.openSession()) {
             Transaction transaction = session.getTransaction();
-            session.update(planet);
+            session.update(client);
             transaction.commit();
         }
     }
 
-    //Delete
-    public void delete(Planet planet){
+    public void delete(Client client){
         try(Session session = sessionFactory.openSession()){
             Transaction transaction = session.getTransaction();
-            session.delete(planet);
+            session.delete(client);
             transaction.commit();
         }
     }
-
 }

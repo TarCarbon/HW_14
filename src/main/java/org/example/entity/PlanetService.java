@@ -1,13 +1,13 @@
 package org.example.entity;
 
 public class PlanetService {
-    private PlanetDAO planetDAO = new PlanetDAO();
+    private PlanetDao planetDAO = new PlanetDao();
 
     public void savePlanet(Planet planet) {
         planetDAO.save(planet);
     }
 
-    public Planet findPlanetById(int id) {
+    public Planet findPlanetById(String id) {
         return planetDAO.findById(id);
     }
 

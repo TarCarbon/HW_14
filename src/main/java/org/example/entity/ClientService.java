@@ -1,7 +1,7 @@
 package org.example.entity;
 
 public class ClientService {
-    private ClientDAO clientDao = new ClientDAO();
+    private ClientDao clientDao = new ClientDao();
 
     public void saveClient(Client client) {
         clientDao.save(client);
